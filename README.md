@@ -95,7 +95,6 @@ Query 2 → Positive Passage 2
 Query 3 → Positive Passage 3
 
 The positive passage associated with each query is treated as the positive target. Other passages in the batch act as negatives.
-
 This approach provides multiple negative comparisons without requiring a separate manually constructed negative for every training example.
 
 ## 7. Negative Sampling
@@ -159,11 +158,8 @@ The final values are generated directly by the evaluation notebook rather than m
 ## 10. Cross-Lingual Alignment
 
 A key objective was to evaluate whether the model can align English and Sanskrit representations.
-
 The system uses English queries and Sanskrit passages in the primary retrieval experiment.
-
 This tests whether semantically equivalent content in two different languages is mapped into nearby embedding regions.
-
 The experiment also evaluates Sanskrit script versus IAST transliteration.
 
 ## 11. Transliteration Mismatch
@@ -181,7 +177,7 @@ The experiment therefore includes transliteration analysis to determine whether 
 ## 12. Retrieval Pipeline
 
 The final retrieval pipeline is:
-
+``
 User Query
 ↓
 E5 query prefix
@@ -195,13 +191,13 @@ Cosine similarity against indexed passages
 Top-K ranking
 ↓
 Relevant Sanskrit passages
-
+``
 This design can directly serve as the retrieval component of a RAG system.
 
 ## 13. Mini RAG Design
 
 A minimal RAG architecture is:
-
+``
 Question
 ↓
 Embedding Retriever
@@ -213,8 +209,8 @@ Context construction
 LLM
 ↓
 Final answer
-
-The current project focuses primarily on the retrieval component because retrieval quality is the central objective of the assignment.
+``
+The current project focuses primarily on the retrieval component because retrieval quality is the central objective.
 
 ## 14. Failure Analysis
 
@@ -223,7 +219,6 @@ Several potential failure modes were investigated.
 ### Semantic overlap
 
 Multiple verses can discuss related concepts such as karma, dharma, duty and action.
-
 Therefore, the model may retrieve a semantically related but not exactly aligned verse.
 
 ### Translation variation
@@ -233,7 +228,6 @@ Different English translations can express the same Sanskrit meaning using subst
 ### Context dependency
 
 Some verses cannot be interpreted accurately without neighboring verses.
-
 A one-verse retrieval system therefore has a structural limitation.
 
 ### Sanskrit morphology
@@ -249,25 +243,21 @@ IAST and Devanagari representations can create tokenization differences.
 ### Why not train from scratch?
 
 The dataset is too small to train a high-quality multilingual embedding model from scratch.
-
 Using a pretrained multilingual encoder allows the experiment to focus on domain adaptation.
 
 ### Why a small model?
 
 The assignment targets T4/L4 GPU environments and a 1–2 day development window.
-
 A smaller model provides faster iteration and easier deployment.
 
 ### Why contrastive learning?
 
 The dataset naturally provides aligned positive pairs.
-
 Contrastive learning directly optimizes the representation space for retrieval.
 
 ### Why chapter-level split?
 
 A random split can produce overly optimistic results because neighboring verses may contain highly similar content.
-
 Chapter-level splitting provides a stronger test of generalization.
 
 ## 16. Limitations
@@ -305,7 +295,7 @@ Possible improvements include:
 The experiment demonstrates that a pretrained multilingual embedding model can be adapted to a specialized Sanskrit-English retrieval task using a relatively small aligned dataset and practical contrastive fine-tuning.
 
 The most important result is not only the final retrieval score, but the complete engineering workflow:
-
+``
 dataset preparation → baseline evaluation → contrastive fine-tuning → retrieval evaluation → error analysis → deployment-oriented retrieval demo.
-
+``
 The project prioritizes reproducibility, efficient use of compute, rigorous evaluation and analysis of multilingual retrieval failure modes.
