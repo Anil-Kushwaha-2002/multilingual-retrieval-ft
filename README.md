@@ -242,6 +242,15 @@ Several potential failure modes were investigated.
 9. Long passage truncation
 10. Insufficient training examples
 ```
+```
+| Failure Type          | Example                   | Explanation                             |
+| --------------------- | ------------------------- | --------------------------------------- |
+| Semantic overlap      | Karma vs duty             | Both concepts appear in multiple verses |
+| Context dependency    | Multi-verse discussion    | Single verse insufficient               |
+| Translation variation | Different English wording | Same meaning expressed differently      |
+| Sanskrit morphology   | Inflected forms           | Surface forms differ                    |
+| Transliteration       | IAST vs Devanagari        | Different token patterns                |
+```
 ### 1. Semantic overlap
 
 * Multiple verses can discuss related concepts such as karma, dharma, duty and action.
