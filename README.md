@@ -7,7 +7,7 @@ Fine-tuned multilingual embedding model for Sanskrit-English semantic retrieval 
 
 This project implements a multilingual semantic retrieval system for Sanskrit-English retrieval. The system fine-tunes `intfloat/multilingual-e5-small` on aligned Sanskrit-English Bhagavad Gita verse pairs using contrastive learning.
 
-The objective is not to train a multilingual embedding model from scratch, but to adapt an existing multilingual retrieval model to a Sanskrit-English domain while keeping the computation practical for a Google Colab T4/L4 environment.
+The objective is not to train a multilingual embedding model from scratch, but to adapt an existing multilingual retrieval model to a Sanskrit-English domain while keeping the computation practical for a `Google Colab T4/L4` environment.
 
 The final system supports:
 
@@ -27,11 +27,11 @@ Example:
 
 Query:
 
-"What does the Bhagavad Gita say about karma?"
+``"What does the Bhagavad Gita say about karma?"``
 
 Expected behavior:
 
-Retrieve Sanskrit verses discussing karma, action, duty and related concepts.
+``Retrieve Sanskrit verses discussing karma, action, duty and related concepts.``
 
 The reverse direction is also evaluated:
 
@@ -71,11 +71,11 @@ Example:
 
 Query:
 
-English translation
+``English translation``
 
 Positive passage:
 
-Corresponding Sanskrit verse
+``Corresponding Sanskrit verse``
 
 ## 5. Data Preparation
 
@@ -119,11 +119,11 @@ For example:
 
 Query:
 
-"What does the Gita say about karma?"
+``"What does the Gita say about karma?"``
 
 Positive:
 
-A verse primarily describing karma.
+``A verse primarily describing karma.``
 
 Hard negative:
 
@@ -141,11 +141,11 @@ The following metrics were used:
 * nDCG@5
 * nDCG@10
 
-Recall@K measures whether the correct aligned passage appears in the top K results.
+- Recall@K measures whether the correct aligned passage appears in the top K results.
 
-MRR measures how highly the correct passage is ranked.
+- MRR measures how highly the correct passage is ranked.
 
-nDCG measures ranking quality while giving more importance to higher-ranked results.
+- nDCG measures ranking quality while giving more importance to higher-ranked results.
 
 ## 9. Baseline vs Fine-Tuned Model
 
@@ -155,25 +155,22 @@ The fine-tuned model was evaluated using exactly the same test set.
 
 | Metric    | Base Model | Fine-Tuned Model |
 | --------- | ---------: | ---------------: |
-| Recall@1  |   [INSERT] |         [INSERT] |
-| Recall@3  |   [INSERT] |         [INSERT] |
-| Recall@5  |   [INSERT] |         [INSERT] |
-| Recall@10 |   [INSERT] |         [INSERT] |
-| MRR       |   [INSERT] |         [INSERT] |
-| nDCG@5    |   [INSERT] |         [INSERT] |
-| nDCG@10   |   [INSERT] |         [INSERT] |
+| Recall@1  |    0.8462  |         0.9923   |
+| Recall@3  |    0.9308  |         0.9923   |
+| Recall@5  |    0.9538  |         0.9923   |
+| Recall@10 |    0.9615  |         0.9923   |
+| MRR       |    0.8948  |         0.9928   |
+| nDCG@5    |    0.9075  |         0.9923   |
+| nDCG@10   |    0.9097  |         0.9923   |
 
-The final values are generated directly by the evaluation notebook rather than manually estimated.
+The final values are generated directly by the evaluation notebook
 
 ## 10. Cross-Lingual Alignment
 
-A key objective was to evaluate whether the model can align English and Sanskrit representations.
-
-The system uses English queries and Sanskrit passages in the primary retrieval experiment.
-
-This tests whether semantically equivalent content in two different languages is mapped into nearby embedding regions.
-
-The experiment also evaluates Sanskrit script versus IAST transliteration.
+* A key objective was to evaluate whether the model can align English and Sanskrit representations.
+* The system uses English queries and Sanskrit passages in the primary retrieval experiment.
+* This tests whether semantically equivalent content in two different languages is mapped into nearby embedding regions.
+* The experiment also evaluates Sanskrit script versus IAST transliteration.
 
 ## 11. Transliteration Mismatch
 
@@ -191,31 +188,21 @@ The experiment therefore includes transliteration analysis to determine whether 
 
 The final retrieval pipeline is:
 
+``
 User Query
-
 ↓
-
 E5 query prefix
-
 ↓
-
 Multilingual embedding model
-
 ↓
-
 384-dimensional normalized vector
-
 ↓
-
 Cosine similarity against indexed passages
-
 ↓
-
 Top-K ranking
-
 ↓
-
 Relevant Sanskrit passages
+``
 
 This design can directly serve as the retrieval component of a RAG system.
 
@@ -223,83 +210,81 @@ This design can directly serve as the retrieval component of a RAG system.
 
 A minimal RAG architecture is:
 
+``
 Question
-
 ↓
-
 Embedding Retriever
-
 ↓
-
 Top-K Sanskrit passages
-
 ↓
-
 Context construction
-
 ↓
-
 LLM
-
 ↓
-
 Final answer
+``
 
 The current project focuses primarily on the retrieval component because retrieval quality is the central objective of the assignment.
 
-## 14. Failure Analysis
+## 14. Failure Analysis modes
 
 Several potential failure modes were investigated.
 
-### Semantic overlap
+```
+1. Semantic overlap
+2. Translation ambiguity
+3. Very short verse
+4. Sanskrit morphology
+5. Transliteration mismatch
+6. Similar philosophical concepts
+7. Multi-verse context required
+8. English translation variation
+9. Long passage truncation
+10. Insufficient training examples
+```
+### 1. Semantic overlap
 
-Multiple verses can discuss related concepts such as karma, dharma, duty and action.
+* Multiple verses can discuss related concepts such as karma, dharma, duty and action.
+* Therefore, the model may retrieve a semantically related but not exactly aligned verse.
 
-Therefore, the model may retrieve a semantically related but not exactly aligned verse.
+### 2. Translation variation
 
-### Translation variation
+* Different English translations can express the same Sanskrit meaning using substantially different wording.
 
-Different English translations can express the same Sanskrit meaning using substantially different wording.
+### 3. Context dependency
 
-### Context dependency
+* Some verses cannot be interpreted accurately without neighboring verses.
+* A one-verse retrieval system therefore has a structural limitation.
 
-Some verses cannot be interpreted accurately without neighboring verses.
+### 4. Sanskrit morphology
 
-A one-verse retrieval system therefore has a structural limitation.
+* Sanskrit is morphologically rich, so the same semantic concept can appear in different inflected forms.
 
-### Sanskrit morphology
+### 5. Transliteration mismatch
 
-Sanskrit is morphologically rich, so the same semantic concept can appear in different inflected forms.
-
-### Transliteration mismatch
-
-IAST and Devanagari representations can create tokenization differences.
+* IAST and Devanagari representations can create tokenization differences.
 
 ## 15. Practical Tradeoffs
 
 ### Why not train from scratch?
 
-The dataset is too small to train a high-quality multilingual embedding model from scratch.
-
-Using a pretrained multilingual encoder allows the experiment to focus on domain adaptation.
+* The dataset is too small to train a high-quality multilingual embedding model from scratch.
+* Using a pretrained multilingual encoder allows the experiment to focus on domain adaptation.
 
 ### Why a small model?
 
-The assignment targets T4/L4 GPU environments and a 1–2 day development window.
-
-A smaller model provides faster iteration and easier deployment.
+* The assignment targets T4/L4 GPU environments and a 1–2 day development window.
+* A smaller model provides faster iteration and easier deployment.
 
 ### Why contrastive learning?
 
-The dataset naturally provides aligned positive pairs.
-
-Contrastive learning directly optimizes the representation space for retrieval.
+* The dataset naturally provides aligned positive pairs.
+* Contrastive learning directly optimizes the representation space for retrieval.
 
 ### Why chapter-level split?
 
-A random split can produce overly optimistic results because neighboring verses may contain highly similar content.
-
-Chapter-level splitting provides a stronger test of generalization.
+* A random split can produce overly optimistic results because neighboring verses may contain highly similar content.
+* Chapter-level splitting provides a stronger test of generalization.
 
 ## 16. Limitations
 
