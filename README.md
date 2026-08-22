@@ -141,11 +141,11 @@ The following metrics were used:
 * nDCG@5
 * nDCG@10
 
-- Recall@K measures whether the correct aligned passage appears in the top K results.
+- Recall@K - measures whether the correct aligned passage appears in the top K results.
 
-- MRR measures how highly the correct passage is ranked.
+- MRR - measures how highly the correct passage is ranked.
 
-- nDCG measures ranking quality while giving more importance to higher-ranked results.
+- nDCG - measures ranking quality while giving more importance to higher-ranked results.
 
 ## 9. Baseline vs Fine-Tuned Model
 
@@ -188,7 +188,7 @@ The experiment therefore includes transliteration analysis to determine whether 
 
 The final retrieval pipeline is:
 
-``
+```
 User Query
 ↓
 E5 query prefix
@@ -202,7 +202,7 @@ Cosine similarity against indexed passages
 Top-K ranking
 ↓
 Relevant Sanskrit passages
-``
+```
 
 This design can directly serve as the retrieval component of a RAG system.
 
@@ -210,7 +210,7 @@ This design can directly serve as the retrieval component of a RAG system.
 
 A minimal RAG architecture is:
 
-``
+```
 Question
 ↓
 Embedding Retriever
@@ -222,7 +222,7 @@ Context construction
 LLM
 ↓
 Final answer
-``
+```
 
 The current project focuses primarily on the retrieval component because retrieval quality is the central objective of the assignment.
 
@@ -318,10 +318,10 @@ Possible improvements include:
 
 ## 18. Final Conclusion
 
-The experiment demonstrates that a pretrained multilingual embedding model can be adapted to a specialized Sanskrit-English retrieval task using a relatively small aligned dataset and practical contrastive fine-tuning.
+* The experiment demonstrates that a pretrained multilingual embedding model can be adapted to a specialized Sanskrit-English retrieval task using a relatively small aligned dataset and practical contrastive fine-tuning.
 
-The most important result is not only the final retrieval score, but the complete engineering workflow:
+* The most important result is not only the final retrieval score, but the complete engineering workflow:
 
-dataset preparation → baseline evaluation → contrastive fine-tuning → retrieval evaluation → error analysis → deployment-oriented retrieval demo.
+```dataset preparation → baseline evaluation → contrastive fine-tuning → retrieval evaluation → error analysis → deployment-oriented retrieval demo.```
 
-The project prioritizes reproducibility, efficient use of compute, rigorous evaluation and analysis of multilingual retrieval failure modes.
+* The project prioritizes reproducibility, efficient use of compute, rigorous evaluation and analysis of multilingual retrieval failure modes.
