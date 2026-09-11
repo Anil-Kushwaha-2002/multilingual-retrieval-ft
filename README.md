@@ -334,3 +334,16 @@ Possible improvements include:
 ```dataset preparation → baseline evaluation → contrastive fine-tuning → retrieval evaluation → error analysis → deployment-oriented retrieval demo.```
 
 * The project prioritizes reproducibility, efficient use of compute, rigorous evaluation and analysis of multilingual retrieval failure modes.
+
+## 19. How to run it
+From the project root:
+
+```pip install -r requirements.txt```
+Then:
+
+Test data preparation, Train & Retrieval
+```
+python -m src.data
+python -m src.train
+python -m src.retrieval
+```
