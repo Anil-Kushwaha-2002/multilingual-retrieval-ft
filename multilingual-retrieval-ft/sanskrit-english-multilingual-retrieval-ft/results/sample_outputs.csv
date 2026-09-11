@@ -1,0 +1,52 @@
+query,rank,score,id,chapter,verse,sanskrit,english
+What does the Bhagavad Gita say about karma?,1,0.10234464704990387,BG17.21,17,21,"यत्तु प्रत्युपकारार्थं फलमुद्दिश्य वा पुनः |
+दीयते च परिक्लिष्टं तद्दानं राजसं स्मृतम् ||१७-२१||","17.21 And, that gift which is given with a view to receive something in return, or looking for a reward, or reluctantly, is held to be Rajasic."
+What does the Bhagavad Gita say about karma?,2,0.09437843412160873,BG18.50,18,50,"सिद्धिं प्राप्तो यथा ब्रह्म तथाप्नोति निबोध मे |
+समासेनैव कौन्तेय निष्ठा ज्ञानस्य या परा ||१८-५०||","18.50 Learn from Me in brief, O Arjuna, how he who has attained perfection reaches Brahman (the Eternal), that supreme state of knowledge."
+What does the Bhagavad Gita say about karma?,3,0.0930175632238388,BG18.78,18,78,"यत्र योगेश्वरः कृष्णो यत्र पार्थो धनुर्धरः |
+तत्र श्रीर्विजयो भूतिर्ध्रुवा नीतिर्मतिर्मम ||१८-७८||","18.78 Wherever is Krishna, the Lord of Yoga; wherever is Arjuna, the wielder of the bow; there are prosperity, victory, happiness and firm policy; such is my conviction."
+What does the Bhagavad Gita say about karma?,4,0.08667333424091339,BG17.20,17,20,"दातव्यमिति यद्दानं दीयतेऽनुपकारिणे |
+देशे काले च पात्रे च तद्दानं सात्त्विकं स्मृतम् ||१७-२०||","17.20 That gift which is given to one who does nothing in return, knowing it to be a duty to give in a fit place and time to a worthy person, that gift is held to be Sattvic."
+What does the Bhagavad Gita say about karma?,5,0.07915802299976349,BG17.11,17,11,"अफलाङ्क्षिभिर्यज्ञो विधिदृष्टो य इज्यते |
+यष्टव्यमेवेति मनः समाधाय स सात्त्विकः ||१७-११||","17.11 That sacrifice which is offered by men without desire for reward as enjoined by the ordinance (scripture), with a firm faith that to do so is a duty, is Sattvic or pure."
+What does Krishna say about controlling the mind?,1,0.17555828392505646,BG18.78,18,78,"यत्र योगेश्वरः कृष्णो यत्र पार्थो धनुर्धरः |
+तत्र श्रीर्विजयो भूतिर्ध्रुवा नीतिर्मतिर्मम ||१८-७८||","18.78 Wherever is Krishna, the Lord of Yoga; wherever is Arjuna, the wielder of the bow; there are prosperity, victory, happiness and firm policy; such is my conviction."
+What does Krishna say about controlling the mind?,2,0.15206313133239746,BG18.75,18,75,"व्यासप्रसादाच्छ्रुतवानेतद्गुह्यमहं परम् |
+योगं योगेश्वरात्कृष्णात्साक्षात्कथयतः स्वयम् ||१८-७५||","18.75 Through the grace of Vyasa I have heard this supreme and most secret Yoga direct from Krishna, the Lord of Yoga, Himself declaring it."
+What does Krishna say about controlling the mind?,3,0.14599433541297913,BG17.1,17,1,"अर्जुन उवाच |
+ये शास्त्रविधिमुत्सृज्य यजन्ते श्रद्धयान्विताः |
+तेषां निष्ठा तु का कृष्ण सत्त्वमाहो रजस्तमः ||१७-१||","17.1 Arjuna said  Those who, setting aside the ordinances of the scriptures, perform sacrifice with faith, what is their condition, O Krishna? Is is Sattva, Rajas or Tamas?"
+What does Krishna say about controlling the mind?,4,0.11116811633110046,BG18.33,18,33,"धृत्या यया धारयते मनःप्राणेन्द्रियक्रियाः |
+योगेनाव्यभिचारिण्या धृतिः सा पार्थ सात्त्विकी ||१८-३३||","18.33 The unwavering firmness by which, through Yoga, the functions of the mind, the life-force and the senses are restrained  that firmness, O Arjuna, is Sattvic (pure)."
+What does Krishna say about controlling the mind?,5,0.10065558552742004,BG18.50,18,50,"सिद्धिं प्राप्तो यथा ब्रह्म तथाप्नोति निबोध मे |
+समासेनैव कौन्तेय निष्ठा ज्ञानस्य या परा ||१८-५०||","18.50 Learn from Me in brief, O Arjuna, how he who has attained perfection reaches Brahman (the Eternal), that supreme state of knowledge."
+What is the nature of the soul?,1,0.18064725399017334,BG18.33,18,33,"धृत्या यया धारयते मनःप्राणेन्द्रियक्रियाः |
+योगेनाव्यभिचारिण्या धृतिः सा पार्थ सात्त्विकी ||१८-३३||","18.33 The unwavering firmness by which, through Yoga, the functions of the mind, the life-force and the senses are restrained  that firmness, O Arjuna, is Sattvic (pure)."
+What is the nature of the soul?,2,0.12598924338817596,BG18.38,18,38,"विषयेन्द्रियसंयोगाद्यत्तदग्रेऽमृतोपमम् |
+परिणामे विषमिव तत्सुखं राजसं स्मृतम् ||१८-३८||","18.38 That happiness which arises from the contact of the sense-organs with the objects, which is at first like nectar, and in the end like poison  that is declared to be Rajasic."
+What is the nature of the soul?,3,0.10213514417409897,BG17.8,17,8,"आयुःसत्त्वबलारोग्यसुखप्रीतिविवर्धनाः |
+रस्याः स्निग्धाः स्थिरा हृद्या आहाराः सात्त्विकप्रियाः ||१७-८||","17.8 The foods which increase life, purity, strength, health, joy and cheerfulness (good appetite), which are savoury and oleaginous, substantial and agreeable, are dear to the Sattvic (pure) people."
+What is the nature of the soul?,4,0.10022218525409698,BG18.42,18,42,"शमो दमस्तपः शौचं क्षान्तिरार्जवमेव च |
+ज्ञानं विज्ञानमास्तिक्यं ब्रह्मकर्म स्वभावजम् ||१८-४२||","18.42 Serenity, self-restraint, austerity, purity, forgiveness and also uprightness, knowledge, realisation and belief in God are the duties of the Brahmanas, born of (their own) nature."
+What is the nature of the soul?,5,0.09097126871347427,BG18.78,18,78,"यत्र योगेश्वरः कृष्णो यत्र पार्थो धनुर्धरः |
+तत्र श्रीर्विजयो भूतिर्ध्रुवा नीतिर्मतिर्मम ||१८-७८||","18.78 Wherever is Krishna, the Lord of Yoga; wherever is Arjuna, the wielder of the bow; there are prosperity, victory, happiness and firm policy; such is my conviction."
+What does the Gita say about meditation?,1,0.11757675558328629,BG18.33,18,33,"धृत्या यया धारयते मनःप्राणेन्द्रियक्रियाः |
+योगेनाव्यभिचारिण्या धृतिः सा पार्थ सात्त्विकी ||१८-३३||","18.33 The unwavering firmness by which, through Yoga, the functions of the mind, the life-force and the senses are restrained  that firmness, O Arjuna, is Sattvic (pure)."
+What does the Gita say about meditation?,2,0.08749399334192276,BG18.60,18,60,"स्वभावजेन कौन्तेय निबद्धः स्वेन कर्मणा |
+कर्तुं नेच्छसि यन्मोहात्करिष्यस्यवशोपि तत् ||१८-६०||","18.60 O Arjuna, bound by thy own Karma (action) born of thy own nature, that which from delusion thou wishest not to do, even that thou shalt do helplessly."
+What does the Gita say about meditation?,3,0.08660179376602173,BG18.50,18,50,"सिद्धिं प्राप्तो यथा ब्रह्म तथाप्नोति निबोध मे |
+समासेनैव कौन्तेय निष्ठा ज्ञानस्य या परा ||१८-५०||","18.50 Learn from Me in brief, O Arjuna, how he who has attained perfection reaches Brahman (the Eternal), that supreme state of knowledge."
+What does the Gita say about meditation?,4,0.07916116714477539,BG18.18,18,18,"ज्ञानं ज्ञेयं परिज्ञाता त्रिविधा कर्मचोदना |
+करणं कर्म कर्तेति त्रिविधः कर्मसंग्रहः ||१८-१८||","18.18 Knowledge, the knowable and the knower form the threefold impulse to action; the organ, the action and the agent form the threefold basis of action."
+What does the Gita say about meditation?,5,0.06686291843652725,BG18.38,18,38,"विषयेन्द्रियसंयोगाद्यत्तदग्रेऽमृतोपमम् |
+परिणामे विषमिव तत्सुखं राजसं स्मृतम् ||१८-३८||","18.38 That happiness which arises from the contact of the sense-organs with the objects, which is at first like nectar, and in the end like poison  that is declared to be Rajasic."
+What is the importance of performing one's duty?,1,0.20624245703220367,BG18.60,18,60,"स्वभावजेन कौन्तेय निबद्धः स्वेन कर्मणा |
+कर्तुं नेच्छसि यन्मोहात्करिष्यस्यवशोपि तत् ||१८-६०||","18.60 O Arjuna, bound by thy own Karma (action) born of thy own nature, that which from delusion thou wishest not to do, even that thou shalt do helplessly."
+What is the importance of performing one's duty?,2,0.20245367288589478,BG18.18,18,18,"ज्ञानं ज्ञेयं परिज्ञाता त्रिविधा कर्मचोदना |
+करणं कर्म कर्तेति त्रिविधः कर्मसंग्रहः ||१८-१८||","18.18 Knowledge, the knowable and the knower form the threefold impulse to action; the organ, the action and the agent form the threefold basis of action."
+What is the importance of performing one's duty?,3,0.16521339118480682,BG18.45,18,45,"स्वे स्वे कर्मण्यभिरतः संसिद्धिं लभते नरः |
+स्वकर्मनिरतः सिद्धिं यथा विन्दति तच्छृणु ||१८-४५||","5.10 He who does actions, offering them to Brahman, and abandoning attachment, is not tainted by sin, just as a lotus-leaf is not tainted by water."
+What is the importance of performing one's duty?,4,0.1481400430202484,BG18.33,18,33,"धृत्या यया धारयते मनःप्राणेन्द्रियक्रियाः |
+योगेनाव्यभिचारिण्या धृतिः सा पार्थ सात्त्विकी ||१८-३३||","18.33 The unwavering firmness by which, through Yoga, the functions of the mind, the life-force and the senses are restrained  that firmness, O Arjuna, is Sattvic (pure)."
+What is the importance of performing one's duty?,5,0.13587304949760437,BG18.31,18,31,"यया धर्ममधर्मं च कार्यं चाकार्यमेव च |
+अयथावत्प्रजानाति बुद्धिः सा पार्थ राजसी ||१८-३१||","18.31 That, by which one wrongly understands Dharma and Adharma and also what ought to be done and what ought not to be done  that intellect, O Arjuna, is Rajasic (passionate)."
